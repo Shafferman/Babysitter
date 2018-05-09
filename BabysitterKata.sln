@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabysitterKata", "BabysitterKata\BabysitterKata.csproj", "{46B33617-CFA9-4447-B3D3-965468F2147F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{095B7B70-8330-4CD7-A2B8-5DAF9805A50C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46B33617-CFA9-4447-B3D3-965468F2147F}.Debug|x86.ActiveCfg = Debug|x86
+		{46B33617-CFA9-4447-B3D3-965468F2147F}.Debug|x86.Build.0 = Debug|x86
+		{46B33617-CFA9-4447-B3D3-965468F2147F}.Release|x86.ActiveCfg = Release|x86
+		{46B33617-CFA9-4447-B3D3-965468F2147F}.Release|x86.Build.0 = Release|x86
+		{095B7B70-8330-4CD7-A2B8-5DAF9805A50C}.Debug|x86.ActiveCfg = Debug|x86
+		{095B7B70-8330-4CD7-A2B8-5DAF9805A50C}.Debug|x86.Build.0 = Debug|x86
+		{095B7B70-8330-4CD7-A2B8-5DAF9805A50C}.Release|x86.ActiveCfg = Release|x86
+		{095B7B70-8330-4CD7-A2B8-5DAF9805A50C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
