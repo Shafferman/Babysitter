@@ -33,7 +33,7 @@ namespace Tests
 
 			var theDictionary = sut.GetArgumentDictionary();
 
-			Assert.AreEqual(theDictionary["startTime"], "12:01");
+			Assert.AreEqual(theDictionary["start"], "12:01");
 		}
 
 		[Test]
@@ -48,7 +48,7 @@ namespace Tests
 
 			var theDictionary = sut.GetArgumentDictionary();
 
-			Assert.AreEqual(theDictionary["endTime"], "5:30");
+			Assert.AreEqual(theDictionary["end"], "5:30");
 		}
 
 		[Test]
@@ -65,8 +65,25 @@ namespace Tests
 
 			var theDictionary = sut.GetArgumentDictionary();
 
-			Assert.AreEqual(theDictionary["endTime"], "5:30");
-			Assert.AreEqual(theDictionary["startTime"], "12:01");
+			Assert.AreEqual(theDictionary["end"], "5:30");
+			Assert.AreEqual(theDictionary["start"], "12:01");
+		}
+		
+		[Test]
+		public void ShouldDropLastArgWhenOddNumberOfArgs()
+		{
+			string[] args = {
+				"start",
+				"12:01",
+				"end"
+			};
+
+			MyParser sut = new MyParser(args);
+
+			var theDictionary = sut.GetArgumentDictionary();
+
+			Assert.False(theDictionary.ContainsKey("end"));
+			Assert.AreEqual(theDictionary["start"], "12:01");
 		}
 	}
 }

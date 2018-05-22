@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 
 namespace BabysitterKata
 {
@@ -14,10 +16,20 @@ namespace BabysitterKata
 
 		public Dictionary<string, string> GetArgumentDictionary()
 		{
-			return new Dictionary<string, string>() {
-				{"endTime", args[3]},
-				{"startTime", args[1]}
-			};
+			var outDictionary = new Dictionary<string, string>();
+			for (int i = 0; i < args.Length; i += 2)
+			{
+				try
+				{
+					outDictionary[args[i]] = args[i + 1];
+				}
+				catch(IndexOutOfRangeException exception)
+				{
+				}
+			}
+
+			return outDictionary;
+
 		}
 	}
 }
