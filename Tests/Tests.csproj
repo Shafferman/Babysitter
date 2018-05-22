@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="TimeEntryTests.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BabysitterKata\BabysitterKata.csproj">
