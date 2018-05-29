@@ -19,7 +19,7 @@ namespace BabysitterKata
             }
             catch (FormatException ex)
             {
-                throw new FormatException("Start Time is invalid!");
+                throw new InputException("Check yo start fool");
             }
 
             validatedDictionary["end"] = DateTime.ParseExact(input["end"], "HHmm", provider);
